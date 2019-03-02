@@ -1,0 +1,173 @@
+body {
+    background-color: rgb(214, 124, 250);
+    background-image: url("../images/sunset.png");
+}
+
+ssssss#header-container {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    overflow: auto;
+    height: 90px;
+    background-color: rgb(152, 184, 252);
+    border: lightpink 2px;
+    opacity: 0.5;
+}
+   
+
+#game-header {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    text-align: center;
+    text-emphasis: bold;
+    padding-top: 30px;
+    padding-bottom: 18px;
+    border: rgb(243, 141, 188) 2px;
+    opacity: 0.85;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 14px;
+}
+
+#number {
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+#total {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 12px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+
+#wins,
+#losses {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+p {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    text-align: left;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.box1 {
+    float: left;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    padding: 40px;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-left: 130px;
+    margin-right: 0;
+    background: rgb(224, 104, 248);
+    outline: 1px solid rgb(247, 143, 212);
+    opacity: 0.7;
+}
+
+#button1 {
+    background-color: rgb(221, 61, 208);
+    color: black;
+    border: 2px solid rgb(198, 26, 250);
+    font-size: 42px;
+    font-family: 'Pacifico', cursive;
+    width: 150px;
+    height:80px;
+    margin-left: 120px;
+   
+}
+
+.box2 {
+    float: right;
+    width: 100%;
+    max-width: 190px;
+    padding: 50px;
+    padding-top: 20px;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-left: ;
+    margin-right: 130px;
+    background: rgb(250, 150, 220);
+    outline: 1px solid rgb(207, 124, 245);
+    opacity: 0.7;
+}
+
+.box3 {
+    float: right;
+    width: 100%;
+    max-width: 190px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 500px;
+    margin-left: ;
+    margin-right: 130px;
+    background: rgb(250, 150, 220);
+    outline: 1px solid rgb(207, 124, 245);
+    opacity: 0.7;
+}
+
+.grid-container {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 20px 20px 20px 0px; /*Make the grid smaller than the container*/
+  grid-gap: 10px;
+  padding: 0px;
+    
+}
+
+#image1 {
+   padding-top: 30px;
+}
+
+#image2 {
+    margin-left: 145px;
+    margin-top: 30px;
+}
+
+#image3 {
+    margin-left: 120px;
+    margin-top: 250px;
+}
+
+#image4 {
+    margin-left: -90px;
+    margin-top: 250px;
+    position: -200, 203;
+    opacity: 0.9;
+}
+
+.btn {
+    outline: 0;
+}
