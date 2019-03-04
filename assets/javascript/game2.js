@@ -15,6 +15,32 @@ $(document).ready(function() {
         console.log($(this).attr("data-id"))
 
     })
+    
+    //$("#image1").on("click", function(event) {
+        //console.log(this)
+        //console.log($(this).attr("data-id=1"))
+
+    //})
+
+    //$("#image2").on("click", function(event) {
+        //console.log(this)
+        //console.log($(this).attr("data-id=2"))
+
+    //})
+
+    //$("#image3").on("click", function(event) {
+        //console.log(this)
+        //console.log($(this).attr("data-id=3"))
+
+    //})
+
+    //$("#image4").on("click", function(event) {
+        //console.log(this)
+        //console.log($(this).attr("data-id=4"))
+
+    //})
+
+
 
     $("#numnum").html("")
     $("#numwins").html(wins)
@@ -39,14 +65,46 @@ let chosenCrystal = crystalList[Math.floor(Math.random() * crystalList.length)];
 let crystal = crystalList[chosenCrystal];
 
 
+//let crystal1 = crystalList[chosenCrystal];
+
+//let crystal2 = crystalList[chosenCrystal];
+
+
+//let crystal3 = crystalList[chosenCrystal];
+
+
+//let crystal4 = crystalList[chosenCrystal];
+
+
+
 
 function startGame () {
 
     $("#numnum").attr("numnum", number);
     $("#numnum").text(number);
-    //$(".btn").each(crystal, function(); 
+    //$(".btn").each(crystal, function () {
+        //$.attr(this, value, crystal);
+    //});
+    
+    
+    
+    //var list = $("#data-id=1", "#data-id=2", "#data-id=3", "#data-id=4")
+        //.each( function(value) {
+    
     
     $(".btn").attr("value", crystal);
+
+    //$("#image1").attr("value", crystal1);
+    //$("#image2").attr("value", crystal2);
+    //$("#image3").attr("value", crystal3);
+    //$("#image4").attr("value", crystal4);
+    
+    
+    
+    //$(".btn").each(crystal, function(); 
+    //$(".btn").each(function () {
+    //$(".btn").attr("value", crystal);
+    //assignCrystal ();
     
     //$(".btn").each(function(assignCrystal));
     
@@ -55,20 +113,46 @@ function startGame () {
 
 }
 
+
+
+//function assignCrystal () {
+    //$(".btn").each("value", crystal);
+//}
+
 //function assignCrystal () {
     //$(".btn").attr("value", crystal);
 //}
 
 function addingCrystals () {
 
-    
+    //var subtotal = 0;
+
+    //$(".btn").each(crystal, function() {
+
+    //var crystalvalue = $(this).val();
+    //var subtotal = subtotal + crystalvalue;
+    //$(".btn").each(crystal, function() {
+        //subtotal = subtotal + this;
+    //});
+
+    //let x = total + parseInt(crystal);
+
+    //let crystalx = [crystal1, crystal2, crystal3, crystal4];
+
     let newtotal = parseInt(total) + parseInt(crystal);
+
     
     $("#numtotal").html(newtotal);
 
 }
 
+function restartGame () {
+    
+    $("#numnum").html("");
+    $("#numtotal").html("");
+//wins not included since it needs to stay the same
 
+}
 
 
 $(document).ready(function() {
@@ -76,6 +160,21 @@ $(document).ready(function() {
     $("#button1").click(startGame);
 
     $(".btn").click(addingCrystals);
+        $(".btn").trigger("click");
+
+    
+    
+    if (total === number) {
+        wins++;
+        alert("You Win!");
+    }
+
+    else {
+        losses++
+        restartGame ()
+    }
+
+        
 
 
-})
+});
