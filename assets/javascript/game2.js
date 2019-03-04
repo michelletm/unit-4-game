@@ -60,7 +60,7 @@ let number = numList[chosenNum];
 
 var crystalList = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
-let chosenCrystal = crystalList[Math.floor(Math.random() * crystalList.length)];
+let chosenCrystal = crystalList[Math.floor(Math.random() * crystalList.length)]; 
 
 let crystal = crystalList[chosenCrystal];
 
@@ -85,6 +85,8 @@ function startGame () {
     //$(".btn").each(crystal, function () {
         //$.attr(this, value, crystal);
     //});
+
+    //assigningCrystals (value);
     
     
     
@@ -92,7 +94,18 @@ function startGame () {
         //.each( function(value) {
     
     
-    $(".btn").attr("value", crystal);
+    
+    
+    $(".btn").each(function (){
+        
+        let num = Math.floor(Math.random()*10 + 2)
+        
+        $(this).attr("value", crystal)
+        chosenCrystal = crystalList[Math.floor(Math.random() * crystalList.length)];
+        crystal = crystalList[chosenCrystal];
+    });
+
+    
 
     //$("#image1").attr("value", crystal1);
     //$("#image2").attr("value", crystal2);
@@ -112,6 +125,12 @@ function startGame () {
     
 
 }
+
+//function assigningCrystals () {
+
+    //for(var i = 0; i > crystalList.length; i++);
+    //$(".btn").attr("value", crystal);
+//}
 
 
 
@@ -160,19 +179,19 @@ $(document).ready(function() {
     $("#button1").click(startGame);
 
     $(".btn").click(addingCrystals);
-        $(".btn").trigger("click");
+        //$(".btn").trigger("click");
 
     
     
-    if (total === number) {
-        wins++;
-        alert("You Win!");
-    }
+        if (total === number) {
+            wins++;
+            alert("You Win!");
+        }
 
-    else {
-        losses++
-        restartGame ()
-    }
+        else {
+            losses++
+            restartGame ()
+        }
 
         
 
